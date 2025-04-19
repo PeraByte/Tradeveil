@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sky_blue">#5A7ABA</color>
+    <color name="deafult_bg">#E7EEFF</color>
+    <color name="purple_team">#556FEC</color>
+    <color name="navy_blue">#071A69</color>
+    <color name="gray_text">#D4D4D4</color>
+    <color name="dark_gray_text">#333333</color>
+    <color name="blue_app">#4C6DB4</color>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "771160066244",
+    "project_id": "tradeveil",
+    "storage_bucket": "tradeveil.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771160066244:android:f2e9cb0d0d727805086191",
+        "android_client_info": {
+          "package_name": "com.example.tradeveil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6m4glj1t5M4ln29HS-fWREKBqMAKlcLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

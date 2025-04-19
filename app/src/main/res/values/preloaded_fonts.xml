@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adlam_display</item>
+        <item>@font/albert_sans</item>
+        <item>@font/albert_sans_bold</item>
+        <item>@font/albert_sans_extrabold</item>
+        <item>@font/ar_one_sans</item>
+        <item>@font/ar_one_sans_bold</item>
+        <item>@font/barlow_medium</item>
+        <item>@font/roboto_medium</item>
+        <item>@font/rubik_bold</item>
+        <item>@font/work_sans_bold</item>
+        <item>@font/work_sans_medium</item>
+        <item>@font/work_sans_semibold</item>
+    </array>
+</resources>
