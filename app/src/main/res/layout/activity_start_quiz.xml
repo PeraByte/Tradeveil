@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/start_quiz_bg"
+    android:background="@color/deafult_bg"
     android:padding="30dp"
     tools:context=".StartQuiz">
 
@@ -32,180 +32,226 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="82dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView15"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#2FADA9"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView126">
+        app:layout_constraintTop_toBottomOf="@+id/textView126" >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="128dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="24dp"
-            android:backgroundTint="@color/purple_team"
-            app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/black_line_bg_swap">
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:cropToPadding="false"
+                app:srcCompat="@drawable/rank_icon_start_quiz" />
 
-                <TextView
-                    android:id="@+id/textView127"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="YOUR RANK"
-                    android:textColor="@color/gray_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView127"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="Rank"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/textView128"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="#10000"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView127"
-                    app:layout_constraintStart_toStartOf="@+id/textView127"
-                    app:layout_constraintTop_toBottomOf="@+id/textView127" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/textView128"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="128dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="64dp"
-            android:backgroundTint="@color/purple_team"
-            app:cardCornerRadius="20dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#FB806E"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView126" >
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/black_line_bg_swap">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView129"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="TOTAL POINTS"
-                    android:textColor="@color/gray_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/points_icon_start_quiz" />
 
-                <TextView
-                    android:id="@+id/textView130"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="⭐30,000"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView129"
-                    app:layout_constraintStart_toStartOf="@+id/textView129"
-                    app:layout_constraintTop_toBottomOf="@+id/textView129" />
+            <TextView
+                android:id="@+id/textView129"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="Points"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView130"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/button28"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/blue_app"
+        android:elevation="10dp"
         android:fontFamily="@font/samsung_sharp_sans_bold"
-        android:gravity="center|left"
-        android:paddingLeft="24dp"
-        android:text="START QUIZ"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:icon="@drawable/play_icon_start_quiz"
-        app:iconGravity="end"
-        app:iconSize="24dp"
+        android:text="Start Quiz"
+        android:textSize="24sp"
+        app:cornerRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView15"
+        app:strokeColor="#CBE7ECF5"
+        app:strokeWidth="15dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button28"
+        app:srcCompat="@drawable/hint_icon_start_quiz" />
+
+    <TextView
+        android:id="@+id/textView133"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:fontFamily="@font/samsung_sharp_sans_bold"
+        android:text="Get Hint"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView65"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-72dp"
+        app:layout_constraintBottom_toTopOf="@+id/button28"
+        app:layout_constraintEnd_toEndOf="@+id/button28"
+        app:layout_constraintStart_toStartOf="@+id/button28"
+        app:srcCompat="@drawable/question_img_start_quiz" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView16"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="42dp"
+        android:backgroundTint="#AACCFC"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button28">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView131"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="Quiz 50/"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView132"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:text="50"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView131"
+                app:layout_constraintStart_toEndOf="@+id/textView131"
+                app:layout_constraintTop_toTopOf="@+id/textView131" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/samsungsharpsans_medium"
+                android:text="500 Points"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:cornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#D32F2F"
+                app:strokeWidth="1.5dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView66"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_marginEnd="-24dp"
-        android:layout_marginBottom="8dp"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button29"
-        app:layout_constraintEnd_toEndOf="@+id/button29"
-        app:srcCompat="@drawable/bulb_icon_start_quiz" />
+        android:layout_marginBottom="-8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView16"
+        app:layout_constraintEnd_toEndOf="@+id/cardView16"
+        app:srcCompat="@drawable/gift_box_img_start_quiz" />
 
-    <Button
-        android:id="@+id/button29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:backgroundTint="@android:color/transparent"
-        android:fontFamily="@font/samsung_sharp_sans_bold"
-        android:paddingRight="32dp"
-        android:text="GET HINT"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button28"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1.5dp" />
 
-    <Button
-        android:id="@+id/button30"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="@android:color/transparent"
-        android:fontFamily="@font/samsung_sharp_sans_bold"
-        android:gravity="center|start"
-        android:text="CHECK OUR TWITTER"
-        android:textColor="@color/black"
-        app:icon="@drawable/twitter_icon_start_quiz"
-        app:iconGravity="end"
-        app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button29"
-        app:strokeColor="#D32F2F"
-        app:strokeWidth="1.5dp"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/button31"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@android:color/transparent"
-        android:fontFamily="@font/samsung_sharp_sans_bold"
-        android:gravity="center|start"
-        android:text="CHECK OUR TELEGRAM"
-        android:textColor="@color/black"
-        app:icon="@drawable/telegram_icon_start_quiz"
-        app:iconGravity="end"
-        app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button30"
-        app:strokeColor="#AAAAAA"
-        app:strokeWidth="1.5dp"
-        tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
