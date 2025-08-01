@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/login_app_logo"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="32dp"
@@ -29,30 +29,29 @@
                 app:srcCompat="@drawable/app_icon_bg" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/login_greeting_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-20dp"
-                android:fontFamily="@font/samsung_sharp_sans_bold"
+                android:textStyle="bold"
                 android:text="Hello again!"
                 android:textColor="#000000"
                 android:textSize="34sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                app:layout_constraintEnd_toEndOf="@+id/login_app_logo"
+                app:layout_constraintStart_toStartOf="@+id/login_app_logo"
+                app:layout_constraintTop_toBottomOf="@+id/login_app_logo" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/login_subtitle_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/samsungsharpsans_medium"
                 android:text="Login to your account"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintEnd_toEndOf="@+id/login_greeting_text"
+                app:layout_constraintStart_toStartOf="@+id/login_greeting_text"
+                app:layout_constraintTop_toBottomOf="@+id/login_greeting_text" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/login_email_input_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
@@ -61,31 +60,27 @@
                 app:hintEnabled="false"
                 app:errorEnabled="true"
                 app:boxStrokeErrorColor="#FF3737"
-                app:layout_constraintEnd_toEndOf="@+id/textView4"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4">
-
+                app:layout_constraintEnd_toEndOf="@+id/login_subtitle_text"
+                app:layout_constraintStart_toStartOf="@+id/login_subtitle_text"
+                app:layout_constraintTop_toBottomOf="@+id/login_subtitle_text">
 
                 <EditText
+                    android:id="@+id/login_email_input"
                     android:layout_width="300dp"
                     android:layout_height="52dp"
                     android:background="@drawable/custom_input_edittext"
                     android:drawableStart="@drawable/email_icon_edittext"
                     android:drawablePadding="10dp"
                     android:hint="Enter your email address"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:paddingStart="12dp"
                     android:textSize="14sp"
                     app:hintAnimationEnabled="false"
                     android:inputType="textEmailAddress"
                     tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
+                android:id="@+id/login_password_input_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -93,12 +88,13 @@
                 app:hintEnabled="false"
                 android:inputType="textPassword"
                 android:textColorHint="#AAAAAA"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/login_email_input_layout"
+                app:layout_constraintStart_toStartOf="@+id/login_email_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/login_email_input_layout"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_password_input"
                     android:layout_width="300dp"
                     android:layout_height="52dp"
                     android:background="@drawable/custom_input_edittext"
@@ -107,88 +103,59 @@
                     android:ems="16"
                     app:hintAnimationEnabled="false"
                     android:hint="Enter your password"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:paddingStart="12dp"
                     android:textSize="14sp"
                     tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/login_forgot_password_button"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginTop="-5dp"
                 android:layout_marginEnd="-18dp"
                 android:backgroundTint="@android:color/transparent"
-                android:fontFamily="@font/samsungsharpsans_medium"
                 android:text="Forgot password?"
                 android:textColor="#D32F2F"
-                app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/login_password_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/login_password_input_layout"
                 tools:ignore="TouchTargetSizeCheck" />
 
-
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/login_continue_button"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
-                android:backgroundTint="#5A7ABA"
-                android:fontFamily="@font/samsungsharpsans_medium"
+                android:backgroundTint="@color/blue_btn"
                 android:text="Continue"
                 android:textSize="14sp"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/login_password_input_layout" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/login_no_account_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/samsungsharpsans_medium"
                 android:text="Don't have an account?"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/button7"
-                app:layout_constraintTop_toBottomOf="@+id/button7" />
+                app:layout_constraintStart_toStartOf="@+id/login_continue_button"
+                app:layout_constraintTop_toBottomOf="@+id/login_continue_button" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/login_signup_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:fontFamily="@font/samsungsharpsans_medium"
                 android:text="Sign-up"
                 android:textColor="#487BC8"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="@+id/textView" />
-
-            <!--            <Button-->
-<!--                android:id="@+id/button3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:backgroundTint="@android:color/transparent"-->
-<!--                android:fontFamily="@font/samsung_sharp_sans_bold"-->
-<!--                android:paddingLeft="18dp"-->
-<!--                android:paddingRight="18dp"-->
-<!--                android:text="SIGN-IN WITH GOOGLE"-->
-<!--                android:textColor="#F4511E"-->
-<!--                app:icon="@drawable/google_icon"-->
-<!--                app:iconTint="#F4511E"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/imageView5"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView2"-->
-<!--                app:strokeColor="#F4511E"-->
-<!--                app:strokeWidth="1.5dp" />-->
-
+                app:layout_constraintBottom_toBottomOf="@+id/login_no_account_text"
+                app:layout_constraintStart_toEndOf="@+id/login_no_account_text"
+                app:layout_constraintTop_toTopOf="@+id/login_no_account_text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

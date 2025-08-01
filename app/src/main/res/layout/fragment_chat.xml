@@ -6,24 +6,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.ChatFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/deafult_bg"
-        android:padding="30dp">
+        android:background="@color/app_deafult">
 
+        <!-- Private Messages Card -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
-            android:layout_width="160dp"
+            android:id="@+id/privateMessagesCard"
+            android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
             android:backgroundTint="#FC9EFC"
             android:paddingLeft="10dp"
             android:paddingTop="40dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/totalPointsCard"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -33,40 +35,43 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView23"
+                    android:id="@+id/privateMessagesIcon"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:layout_gravity="center_horizontal"
                     app:srcCompat="@drawable/private_messages_icon_chat" />
 
                 <Button
-                    android:id="@+id/button10"
+                    android:id="@+id/privateMessagesButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginTop="6dp"
                     android:backgroundTint="@color/white"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
                     android:text="Private Messages"
                     android:textColor="@color/black"
                     android:textSize="11sp"
+                    android:textStyle="bold"
                     app:strokeColor="#F0C5FA"
                     app:strokeWidth="6dp" />
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
+        <!-- Total Points Card -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView7"
-            android:layout_width="160dp"
+            android:id="@+id/totalPointsCard"
+            android:layout_width="0dp"
             android:layout_height="140dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#B6E6BC"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/privateMessagesCard"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,51 +79,55 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView51"
+                    android:id="@+id/totalPointsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
                     android:text="Total Points"
                     android:textColor="@color/black"
-                    android:textSize="22sp" />
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView52"
+                    android:id="@+id/pointsSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:text="Earn From Global Chat"
                     android:textSize="10sp" />
 
                 <TextView
-                    android:id="@+id/textView53"
+                    android:id="@+id/pointsValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
                     android:shadowColor="@color/black"
                     android:text="400"
                     android:textColor="#FB8C00"
-                    android:textSize="34sp" />
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Pending Messages Card -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView9"
-            android:layout_width="160dp"
+            android:id="@+id/pendingMessagesCard"
+            android:layout_width="0dp"
             android:layout_height="200dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
             android:backgroundTint="#AACCFC"
+            android:clickable="true"
+            android:focusable="true"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="@+id/cardView5"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/cardView5"
-            app:layout_constraintTop_toBottomOf="@+id/cardView5" >
+            app:layout_constraintEnd_toStartOf="@+id/messagePointsCard"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privateMessagesCard">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,91 +135,109 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView29"
+                    android:id="@+id/pendingMessagesIcon"
                     android:layout_width="135dp"
                     android:layout_height="135dp"
                     android:layout_gravity="center_horizontal"
                     app:srcCompat="@drawable/pending_messages_icon_chat" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/pendingMessagesButton"
                     android:layout_width="145dp"
                     android:layout_height="32dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:backgroundTint="#C9DBFF"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:cardCornerRadius="50dp"
                     app:cardElevation="0dp">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView54"
+                            android:id="@+id/pendingMessagesLabel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="12dp"
-                            android:fontFamily="@font/samsung_sharp_sans_bold"
                             android:text="Pending Messages"
                             android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView55"
+                            android:id="@+id/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="5dp"
-                            android:fontFamily="@font/samsung_sharp_sans_bold"
-                            android:text="10"
-                            android:textColor="#E53935" />
+                            android:layout_marginLeft="4dp"
+                            android:text="( "
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pendingMessagesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="9"
+                            android:textColor="@color/green"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text=" )"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Message Points Card -->
         <androidx.cardview.widget.CardView
-            android:layout_width="160dp"
+            android:id="@+id/messagePointsCard"
+            android:layout_width="0dp"
             android:layout_height="260dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:backgroundTint="#B3A3FB"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="@+id/cardView7"
-            app:layout_constraintStart_toStartOf="@+id/cardView7"
-            app:layout_constraintTop_toBottomOf="@+id/cardView7" >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pendingMessagesCard"
+            app:layout_constraintTop_toBottomOf="@+id/totalPointsCard">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView34"
+                    android:id="@+id/messagePointsIcon"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     app:srcCompat="@drawable/message_points_icon_chat" />
 
-                <TextView
-                    android:id="@+id/textView56"
+                <Button
+                    android:id="@+id/claimPointsButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="-15dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="Messages 1000/400"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/button11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="#EB9A0D"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
+                    android:paddingHorizontal="12dp"
                     android:paddingLeft="0dp"
                     android:paddingTop="0dp"
                     android:paddingRight="0dp"
@@ -218,6 +245,7 @@
                     android:text="1k Points"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     app:icon="@drawable/password_icon"
                     app:iconGravity="textEnd"
                     app:iconSize="24dp"
@@ -225,68 +253,83 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Chat Now Banner -->
         <androidx.cardview.widget.CardView
-            android:layout_width="330dp"
-            android:layout_height="135dp"
+            android:id="@+id/chatNowBanner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView9">
+            app:layout_constraintEnd_toEndOf="@+id/messagePointsCard"
+            app:layout_constraintStart_toStartOf="@+id/pendingMessagesCard"
+            app:layout_constraintTop_toBottomOf="@+id/pendingMessagesCard">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/global_chat_bg_chat">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView57"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
-                    android:text="The World Is Waiting For Pioneer"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/chat_icon_global_chat"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/bannerTitle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Start sending messages to the Global Chat"
+                    android:textColor="@color/gray_text"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
                 <androidx.cardview.widget.CardView
-                    android:layout_width="135dp"
-                    android:layout_height="36dp"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#AB838488"
-                    app:cardCornerRadius="50dp"
+                    android:id="@+id/chatNowBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bannerTitle">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@drawable/get_start_btn_bg"
                         android:orientation="horizontal">
 
-                        <ImageView
-                            android:id="@+id/imageView35"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="-7dp"
-                            app:srcCompat="@drawable/earth_icon_chat" />
-
                         <TextView
-                            android:id="@+id/textView58"
+                            android:id="@+id/getStartText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="-6dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
                             android:layout_marginBottom="1dp"
-                            android:fontFamily="@font/samsung_sharp_sans_bold"
-                            android:text="Chat Now"
-                            android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            android:gravity="center_horizontal"
+                            android:text="Get Start"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/getStartIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:outlineSpotShadowColor="@color/black"
+                            app:srcCompat="@drawable/get_start_icon_lucky_draw" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>

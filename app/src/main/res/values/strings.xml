@@ -14,6 +14,34 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="points_format">%d pts</string>
+
+    //Global CHat System
+    <string name="points_display">%d</string>
+    <string name="messages_progress">%d/%d messages</string>
+    <string name="messages_remaining">You still have %d messages left</string>
+    <string name="coming_soon_title">Coming Soon</string>
+    <string name="private_messages_coming_soon">Private messages feature will be available in the next update!</string>
+    <string name="ok">OK</string>
+    <string name="ad_limit_reached">No more ads available (limit %d per %d hours)</string>
+    <string name="reward_message">You earned %d message credits! (%d ads left)</string>
+    <string name="ad_not_ready">Ad not ready yet</string>
+
+    //Referral System
+    <string name="your_referral_code">%s</string>
+    <string name="referral_share_text">Join me on TradeVeil! Use my referral code: %s to get bonus points when you sign up.</string>
+    <string name="share_referral_code">Share Referral Code</string>
+    <string name="referral_code_copied">Referral code copied</string>
+    <string name="no_referral_code">No referral code available</string>
+    <string name="copy_failed">Failed to copy code</string>
+    <string name="no_share_app">No app available to share</string>
+
+
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <string name="points_to_next_level">%1$s to next level</string>
+    <string name="daily_reward_points">+%1$d pts/day</string>
+
+    <string name="default_notification_channel_id">channel_updates</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

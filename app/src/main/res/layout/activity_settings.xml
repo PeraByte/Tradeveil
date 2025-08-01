@@ -1,299 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deafult_bg"
-    android:padding="30dp"
-    tools:context=".Settings">
+    android:fillViewport="true"
+    android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
-
-    <TextView
-        android:id="@+id/textView89"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="Settings"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
-        app:layout_constraintStart_toEndOf="@+id/imageView43"
-        app:layout_constraintTop_toTopOf="@+id/imageView43" />
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView89">
+        android:padding="16dp">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="320dp"
+        <!-- ────────────────────────────────────────────── -->
+        <!-- TOP BAR -->
+        <!-- ────────────────────────────────────────────── -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
 
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/backButton" />
+
+        <!-- Guideline to keep content from stretching too wide on tablets -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/contentGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.0" />
+
+        <!-- ────────────────────────────────────────────── -->
+        <!-- ACCOUNT SECTION -->
+        <!-- ────────────────────────────────────────────── -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/accountSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@id/contentGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton">
+
+            <!-- Section title row -->
             <ImageView
-                android:id="@+id/imageView44"
+                android:id="@+id/accountIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/profile_icon" />
 
             <TextView
-                android:id="@+id/textView90"
+                android:id="@+id/accountSectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="8dp"
                 android:text="Account"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView44"
-                app:layout_constraintStart_toEndOf="@+id/imageView44"
-                app:layout_constraintTop_toTopOf="@+id/imageView44" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/accountIcon"
+                app:layout_constraintStart_toEndOf="@id/accountIcon"
+                app:layout_constraintTop_toTopOf="@id/accountIcon" />
 
             <View
-                android:id="@+id/divider5"
-                android:layout_width="match_parent"
+                android:id="@+id/accountDivider"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="4dp"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView90" />
+                app:layout_constraintTop_toBottomOf="@id/accountSectionTitle" />
 
+            <!-- Edit Profile -->
             <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="300dp"
+                android:id="@+id/editProfileLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider5">
+                app:layout_constraintTop_toBottomOf="@id/accountDivider">
 
                 <TextView
-                    android:id="@+id/textView91"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Edit Profile"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/imageView45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
                     android:rotation="180"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
 
+            <!-- Change Email -->
             <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="300dp"
+                android:id="@+id/changeEmailLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editProfileLayout">
 
                 <TextView
-                    android:id="@+id/textView92"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Change Email"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/imageView46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
                     android:rotation="180"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
 
+            <!-- Change Password -->
             <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="300dp"
+                android:id="@+id/changePasswordLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/changeEmailLayout">
 
                 <TextView
-                    android:id="@+id/textView93"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Change Password"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/imageView47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
                     android:rotation="180"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- ────────────────────────────────────────────── -->
+        <!-- NOTIFICATIONS SECTION -->
+        <!-- ────────────────────────────────────────────── -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="320dp"
+            android:id="@+id/notificationsSection"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@id/contentGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountSection">
 
+            <!-- Title row -->
             <ImageView
-                android:id="@+id/imageView49"
+                android:id="@+id/notificationsIcon"
                 android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
+                android:layout_height="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/notification_icon_svg" />
 
             <TextView
-                android:id="@+id/textView94"
+                android:id="@+id/notificationsSectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:fontFamily="@font/samsung_sharp_sans_bold"
                 android:text="Notifications"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView49"
-                app:layout_constraintStart_toEndOf="@+id/imageView49"
-                app:layout_constraintTop_toTopOf="@+id/imageView49" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/notificationsIcon"
+                app:layout_constraintStart_toEndOf="@id/notificationsIcon"
+                app:layout_constraintTop_toTopOf="@id/notificationsIcon" />
 
             <View
-                android:id="@+id/divider6"
-                android:layout_width="match_parent"
+                android:id="@+id/notificationsDivider"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="4dp"
                 android:background="?android:attr/listDivider"
-                app:layout_constraintTop_toBottomOf="@+id/textView94"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notificationsSectionTitle" />
 
+            <!-- Messages -->
             <LinearLayout
-                android:id="@+id/linearLayout8"
-                android:layout_width="300dp"
+                android:id="@+id/messagesLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider6">
+                app:layout_constraintTop_toBottomOf="@id/notificationsDivider">
 
                 <TextView
-                    android:id="@+id/textView95"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Messages"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <Switch
-                    android:id="@+id/switch1"
+                    android:id="@+id/messagesSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     tools:ignore="TouchTargetSizeCheck" />
-
             </LinearLayout>
 
+            <!-- Quiz Reminders -->
             <LinearLayout
-                android:id="@+id/linearLayout6"
-                android:layout_width="300dp"
+                android:id="@+id/quizRemindersLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+                app:layout_constraintTop_toBottomOf="@id/messagesLayout">
 
                 <TextView
-                    android:id="@+id/textView96"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Quiz Reminders"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <Switch
-                    android:id="@+id/switch2"
+                    android:id="@+id/quizRemindersSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
+            <!-- Update Reminders -->
             <LinearLayout
-                android:id="@+id/linearLayout7"
-                android:layout_width="300dp"
+                android:id="@+id/updateRemindersLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+                app:layout_constraintTop_toBottomOf="@id/quizRemindersLayout">
 
                 <TextView
-                    android:id="@+id/textView97"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Update Reminders"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <Switch
-                    android:id="@+id/switch3"
+                    android:id="@+id/updateRemindersSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -301,116 +304,123 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- ────────────────────────────────────────────── -->
+        <!-- MORE SECTION -->
+        <!-- ────────────────────────────────────────────── -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="320dp"
+            android:id="@+id/moreSection"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@id/contentGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationsSection">
 
+            <!-- Title row -->
             <ImageView
-                android:id="@+id/imageView50"
+                android:id="@+id/moreIcon"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="6dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/more_icon_svg" />
 
             <TextView
-                android:id="@+id/textView98"
+                android:id="@+id/moreSectionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:fontFamily="@font/samsung_sharp_sans_bold"
                 android:text="More"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView50"
-                app:layout_constraintStart_toEndOf="@+id/imageView50"
-                app:layout_constraintTop_toTopOf="@+id/imageView50" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/moreIcon"
+                app:layout_constraintStart_toEndOf="@id/moreIcon"
+                app:layout_constraintTop_toTopOf="@id/moreIcon" />
 
             <View
-                android:id="@+id/divider7"
-                android:layout_width="match_parent"
+                android:id="@+id/moreDivider"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_marginTop="4dp"
                 android:background="?android:attr/listDivider"
-                app:layout_constraintTop_toBottomOf="@+id/textView98"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moreSectionTitle" />
 
+            <!-- About -->
             <LinearLayout
-                android:id="@+id/linearLayout11"
-                android:layout_width="300dp"
+                android:id="@+id/aboutLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider7">
+                app:layout_constraintTop_toBottomOf="@id/moreDivider">
 
                 <TextView
-                    android:id="@+id/textView99"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="About"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/imageView51"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
                     android:rotation="180"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
 
+            <!-- Rate Us -->
             <LinearLayout
-                android:id="@+id/linearLayout9"
-                android:layout_width="300dp"
+                android:id="@+id/rateUsLayout"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+                app:layout_constraintTop_toBottomOf="@id/aboutLayout">
 
                 <TextView
-                    android:id="@+id/textView100"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="Rate Us"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/imageView52"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="0.1"
                     android:rotation="180"
                     app:srcCompat="@drawable/arrow" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- ────────────────────────────────────────────── -->
+        <!-- LOGOUT BUTTON -->
+        <!-- ────────────────────────────────────────────── -->
         <Button
-            android:id="@+id/button17"
-            android:layout_width="320dp"
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
+            android:layout_marginBottom="24dp"
             android:backgroundTint="#D32F2F"
-            android:fontFamily="@font/samsung_sharp_sans_bold"
             android:text="Logout"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/contentGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moreSection" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -5,24 +5,79 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragment">
 
-    <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.tradeveil.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.tradeveil.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/homeFragment"
+        android:name="com.example.tradeveil.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_homeFragment_to_startQuiz"
+            app:destination="@id/startQuiz" />
+        <action
+            android:id="@+id/action_homeFragment_to_withdrawal"
+            app:destination="@id/withdrawal" />
+        <action
+            android:id="@+id/action_homeFragment_to_missions"
+            app:destination="@id/missions" />
+        <action
+            android:id="@+id/action_homeFragment_to_managePoints"
+            app:destination="@id/managePoints" />
+        <action
+            android:id="@+id/action_homeFragment_to_notifications"
+            app:destination="@id/notifications" />
+        <action
+            android:id="@+id/action_homeFragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_homeFragment_to_spin"
+            app:destination="@id/spin" />
     </fragment>
+    <activity
+        android:id="@+id/settings"
+        android:name="com.example.tradeveil.Settings"
+        android:label="activity_settings"
+        tools:layout="@layout/activity_settings" />
+    <activity
+        android:id="@+id/notifications"
+        android:name="com.example.tradeveil.Notifications"
+        android:label="activity_notifications"
+        tools:layout="@layout/activity_notifications" />
+    <activity
+        android:id="@+id/withdrawal"
+        android:name="com.example.tradeveil.Withdrawal"
+        android:label="Withdrawal" />
+    <activity
+        android:id="@+id/startQuiz"
+        android:name="com.example.tradeveil.StartQuiz"
+        android:label="activity_start_quiz"
+        tools:layout="@layout/activity_start_quiz" />
+    <activity
+        android:id="@+id/missions"
+        android:name="com.example.tradeveil.Missions"
+        android:label="activity_missions"
+        tools:layout="@layout/activity_missions" />
+    <activity
+        android:id="@+id/managePoints"
+        android:name="com.example.tradeveil.ManagePoints"
+        android:label="activity_manage_points"
+        tools:layout="@layout/activity_manage_points" />
+    <activity
+        android:id="@+id/spin"
+        android:name="com.example.tradeveil.Spin"
+        android:label="activity_spin"
+        tools:layout="@layout/activity_spin" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.tradeveil.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_globalChat"
+            app:destination="@id/globalChat" />
+    </fragment>
+    <activity
+        android:id="@+id/globalChat"
+        android:name="com.example.tradeveil.GlobalChat"
+        android:label="GlobalChat" />
 </navigation>

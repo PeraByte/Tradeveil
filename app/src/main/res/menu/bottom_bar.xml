@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item0"
+        android:title="Home"
+        android:icon="@drawable/home_nav"/>
+
+    <item
+        android:id="@+id/item1"
+        android:title="Rank"
+        android:icon="@drawable/leaderboard_nav"/>
+
+    <item
+        android:id="@+id/item2"
+        android:title="Chat"
+        android:icon="@drawable/chat_nav"/>
+
+    <item
+        android:id="@+id/item3"
+        android:title="Team"
+        android:icon="@drawable/team_nav"/>
+
+    <item
+        android:id="@+id/item4"
+        android:title="Swap"
+        android:icon="@drawable/swap_nav"/>
+</menu>

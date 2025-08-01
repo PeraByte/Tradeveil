@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Basic configuration for Google Mobile Ads -->
+    <custom-configs>
+        <config key="enable_debug_logging" value="true" />
+    </custom-configs>
+</ad-services-config>

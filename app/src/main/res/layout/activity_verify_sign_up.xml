@@ -23,11 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/samsung_sharp_sans_bold"
+        android:textStyle="bold"
         android:text="Verify your email"
         android:textColor="#000000"
         android:textSize="34sp" />
-
 
     <TextView
         android:id="@+id/description_vsu"
@@ -35,54 +34,51 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="2dp"
-        android:fontFamily="@font/samsungsharpsans_medium"
-        android:text="Please enter the verification code we sent to your email address to complete the verification process"
+        android:text="We've sent a verification link to your email address. Please click on the link to complete your registration."
         android:textAlignment="center" />
 
-    <EditText
-        android:id="@+id/enterOTP_vsu"
-        android:layout_width="240dp"
+    <TextView
+        android:id="@+id/email_display"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
-        android:background="@android:drawable/editbox_background_normal"
-        android:ems="6"
-        android:fontFamily="@font/samsungsharpsans_medium"
-        android:gravity="center"
-        android:hint="000000"
-        android:inputType="number"
-        android:letterSpacing="1"
-        android:maxEms="6"
-        android:minEms="6"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:text="user@example.com"
+        android:textColor="@color/sky_blue"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/continue_btn_vsu"
+        android:id="@+id/open_email_btn_vsu"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"
-        android:backgroundTint="@color/sky_blue"
-        android:fontFamily="@font/samsungsharpsans_medium"
-        android:text="Continue"
+        android:backgroundTint="@color/blue_btn"
+        android:text="Open Email App"
         app:cornerRadius="10dp" />
 
     <Button
-        android:id="@+id/resend_code_btn_vsu"
+        android:id="@+id/resend_link_btn_vsu"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:backgroundTint="@android:color/transparent"
-        android:fontFamily="@font/samsungsharpsans_medium"
-        android:text="Resend the code"
-        android:textColor="@color/black"
+        android:text="Resend verification link"
+        android:textColor="@color/blue_btn"
         app:cornerRadius="10dp"
-        app:strokeColor="@color/black"
+        app:strokeColor="@color/blue_btn"
         app:strokeWidth="1.5dp" />
+
+    <TextView
+        android:id="@+id/trouble_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Didn't receive the email? Check your spam folder."
+        android:textColor="#666666"
+        android:textSize="14sp" />
 
 </LinearLayout>

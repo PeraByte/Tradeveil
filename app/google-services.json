@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "771160066244",
+    "firebase_url": "https://tradeveil-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "tradeveil",
     "storage_bucket": "tradeveil.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.tradeveil"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "771160066244-gt6prfho1n22k1prmakdti39tkdu9j9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tradeveil",
+            "certificate_hash": "2bc01a01e7abdd4bd3317695a27fc4f34f609077"
+          }
+        },
+        {
+          "client_id": "771160066244-ckj2arq7ffcqkuc0e2e2337tm98vao4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA6m4glj1t5M4ln29HS-fWREKBqMAKlcLg"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771160066244-ckj2arq7ffcqkuc0e2e2337tm98vao4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

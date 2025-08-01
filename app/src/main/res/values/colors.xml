@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#E7EEFF</color>
+    <color name="colorAccent">#5271FF</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="sky_blue">#5A7ABA</color>
-    <color name="deafult_bg">#E7EEFF</color>
+    <color name="deafult_bg">#FFFFFF</color>
+    <color name="app_deafult">#E7EEFF</color>
     <color name="purple_team">#556FEC</color>
     <color name="navy_blue">#071A69</color>
     <color name="gray_text">#D4D4D4</color>
-    <color name="dark_gray_text">#333333</color>
+    <color name="dark_gray_text">#949494</color>
     <color name="blue_app">#4C6DB4</color>
+    <color name="teal_700">#009688</color>
+    <color name="nav_grey">#9299A3</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#0FA047</color>
+    <color name="dark_green">#388E3C</color>
+    <color name="blue_btn">#5271FF</color>
+    <color name="dark_grey_text">#B4B4B4</color>
+    <color name="pending_message_button_bg">#C9DBFF</color>
 </resources>

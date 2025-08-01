@@ -5,72 +5,86 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/deafult_bg"
-    android:padding="30dp"
+    android:background="@color/app_deafult"
     tools:context=".Quiz">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llTopBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
 
         <ImageView
-            android:id="@+id/imageView42"
+            android:id="@+id/ivBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
+            android:layout_marginTop="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView80"
+            android:id="@+id/tvQuizTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="130dp"
-            android:fontFamily="@font/samsung_sharp_sans_bold"
-            android:text="Quiz"
+            android:layout_marginTop="16dp"
+            android:text="Learn &amp; Grab Points"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvAttempts"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView81"
+            android:id="@+id/tvAttempts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:fontFamily="@font/samsung_sharp_sans_bold"
-            android:text="7"
+            android:layout_marginTop="16dp"
+            android:text="1"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView82"
+            android:id="@+id/tvTotalQuestions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/samsung_sharp_sans_bold"
-            android:text="/10"
+            android:text="1"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/clTimerArea"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/llTopBar">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView13"
+            android:id="@+id/cvQuestionCard"
             android:layout_width="320dp"
             android:layout_height="200dp"
             android:layout_marginBottom="4dp"
@@ -82,17 +96,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:paddingHorizontal="12dp"
-                android:paddingTop="50dp"
-                android:paddingBottom="12dp">
+                android:paddingTop="32dp"
+                android:paddingBottom="24dp">
 
                 <TextView
-                    android:id="@+id/textView83"
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q."
+                    android:textColor="@color/gray_text"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvQuestionText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
+                    android:gravity="center_vertical"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -105,52 +127,54 @@
             android:layout_marginBottom="-26dp"
             app:cardCornerRadius="100dp"
             app:cardElevation="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/cardView13"
-            app:layout_constraintEnd_toEndOf="@+id/cardView13"
-            app:layout_constraintStart_toStartOf="@+id/cardView13">
+            app:layout_constraintBottom_toTopOf="@+id/cvQuestionCard"
+            app:layout_constraintEnd_toEndOf="@+id/cvQuestionCard"
+            app:layout_constraintStart_toStartOf="@+id/cvQuestionCard">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ProgressBar
-                    android:id="@+id/progressBar"
+                    android:id="@+id/pbTimer"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="94dp"
                     android:layout_height="94dp"
+                    android:indeterminateTint="@color/blue_btn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView84"
+                    android:id="@+id/tvTimer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/samsung_sharp_sans_bold"
                     android:text="30"
                     android:textColor="@color/sky_blue"
                     android:textSize="30sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- FIXED: Options container with proper RadioGroup structure -->
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/optionsContainer"
         android:layout_width="330dp"
         android:layout_height="256dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/clTimerArea">
 
+        <!-- Option 1 Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
             android:layout_height="50dp"
@@ -160,63 +184,34 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
 
                 <TextView
-                    android:id="@+id/textView85"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvOption1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
                     android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/rbOption1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp" />
-
+                    android:layout_marginRight="8dp"
+                    android:clickable="false"
+                    android:focusable="false" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            app:cardCornerRadius="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView86"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginBottom="1dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
-                    android:text="TextView"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
+        <!-- Option 2 Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
             android:layout_height="50dp"
@@ -227,29 +222,34 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
 
                 <TextView
-                    android:id="@+id/textView87"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvOption2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
                     android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/rbOption2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp" />
+                    android:layout_marginRight="8dp"
+                    android:clickable="false"
+                    android:focusable="false" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Option 3 Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
             android:layout_height="50dp"
@@ -260,43 +260,118 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
 
                 <TextView
-                    android:id="@+id/textView88"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvOption3"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
                     android:layout_marginBottom="1dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/samsungsharpsans_medium"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/rbOption3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp" />
+                    android:layout_marginRight="8dp"
+                    android:clickable="false"
+                    android:focusable="false" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- Option 4 Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvOption4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rbOption4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:clickable="false"
+                    android:focusable="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
+    <!-- Hidden RadioGroup for proper single selection behavior -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/optionsContainer">
+
+        <RadioButton
+            android:id="@+id/rbHidden1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rbHidden2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rbHidden3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rbHidden4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/btnNext"
         android:layout_width="320dp"
         android:layout_height="54dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="@color/sky_blue"
-        android:fontFamily="@font/samsung_sharp_sans_bold"
+        android:backgroundTint="@color/blue_btn"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/optionsContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

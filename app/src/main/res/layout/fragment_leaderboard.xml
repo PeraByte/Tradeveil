@@ -9,15 +9,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="30dp"
         android:background="@drawable/leaderboard_bg">
 
         <TextView
-            android:id="@+id/textView105"
+            android:id="@+id/leaderboardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/samsung_sharp_sans_bold"
+            android:textStyle="bold"
             android:text="Leader Board"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -26,98 +25,102 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView57"
+            android:id="@+id/podiumImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView105"
+            app:layout_constraintTop_toBottomOf="@+id/leaderboardTitle"
             app:srcCompat="@drawable/podium_leaderboard" />
 
-        <ImageView
-            android:id="@+id/imageView58"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/firstPlaceAvatar"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginBottom="12dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/imageView57"
-            app:layout_constraintEnd_toEndOf="@+id/imageView57"
-            app:layout_constraintStart_toStartOf="@+id/imageView57"
+            app:layout_constraintBottom_toTopOf="@+id/podiumImage"
+            app:layout_constraintEnd_toEndOf="@+id/podiumImage"
+            app:layout_constraintStart_toStartOf="@+id/podiumImage"
             app:srcCompat="@drawable/avatar" />
 
-        <ImageView
-            android:id="@+id/imageView59"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/thirdPlaceAvatar"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="-40dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/imageView57"
-            app:layout_constraintEnd_toEndOf="@+id/imageView57"
+            app:layout_constraintBottom_toTopOf="@+id/podiumImage"
+            app:layout_constraintEnd_toEndOf="@+id/podiumImage"
             app:srcCompat="@drawable/avatar" />
 
-        <ImageView
-            android:id="@+id/imageView60"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/secondPlaceAvatar"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="-16dp"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/imageView57"
-            app:layout_constraintStart_toStartOf="@+id/imageView57"
+            app:layout_constraintBottom_toTopOf="@+id/podiumImage"
+            app:layout_constraintStart_toStartOf="@+id/podiumImage"
             app:srcCompat="@drawable/avatar" />
 
         <ImageView
-            android:id="@+id/imageView61"
+            android:id="@+id/secondPlaceCrown"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginBottom="-16dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView58"
-            app:layout_constraintEnd_toEndOf="@+id/imageView58"
-            app:layout_constraintStart_toStartOf="@+id/imageView58"
+            app:layout_constraintBottom_toTopOf="@+id/secondPlaceAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/secondPlaceAvatar"
+            app:layout_constraintStart_toStartOf="@+id/secondPlaceAvatar"
             app:srcCompat="@drawable/crown_icon_leaderboard" />
 
         <ImageView
-            android:id="@+id/imageView62"
+            android:id="@+id/thirdPlaceCrown"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginBottom="-16dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView60"
-            app:layout_constraintEnd_toEndOf="@+id/imageView60"
-            app:layout_constraintStart_toStartOf="@+id/imageView60"
+            app:layout_constraintBottom_toTopOf="@+id/thirdPlaceAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/thirdPlaceAvatar"
+            app:layout_constraintStart_toStartOf="@+id/thirdPlaceAvatar"
             app:srcCompat="@drawable/crown_icon_leaderboard" />
 
         <ImageView
-            android:id="@+id/imageView63"
+            android:id="@+id/firstPlaceCrown"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginBottom="-16dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView59"
-            app:layout_constraintEnd_toEndOf="@+id/imageView59"
-            app:layout_constraintStart_toStartOf="@+id/imageView59"
+            app:layout_constraintBottom_toTopOf="@+id/firstPlaceAvatar"
+            app:layout_constraintEnd_toEndOf="@+id/firstPlaceAvatar"
+            app:layout_constraintStart_toStartOf="@+id/firstPlaceAvatar"
             app:srcCompat="@drawable/crown_icon_leaderboard" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="match_parent"
-            android:layout_height="480dp"
+            android:layout_height="0dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="-60dp"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="#EFEEFC"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/app_deafult"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView57">
+            app:layout_constraintTop_toBottomOf="@+id/podiumImage">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
 
                 <View
-                    android:id="@+id/divider8"
+                    android:id="@+id/leaderboardDivider"
                     android:layout_width="70dp"
                     android:layout_height="2dp"
                     android:layout_gravity="center_horizontal"
@@ -125,11 +128,76 @@
                     android:background="?android:attr/listDivider" />
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/leaderboardRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="20dp" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+        <!-- Error State -->
+        <LinearLayout
+            android:id="@+id/errorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_app"
+                android:textSize="16sp"
+                android:text="Failed to load leaderboard"/>
+
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_app"
+                android:layout_marginTop="16dp"
+                android:text="Retry"/>
+        </LinearLayout>
+
+        <!-- Empty State -->
+        <LinearLayout
+            android:id="@+id/emptyStateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_app"
+                android:textSize="16sp"
+                android:text="No users found on the leaderboard"/>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

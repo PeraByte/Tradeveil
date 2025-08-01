@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_deafult">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_team_background"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/team_bg_pic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Referral Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_referral"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="32dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="340dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_referral_image"
+                                android:layout_width="180dp"
+                                android:layout_height="180dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-24dp"
+                                android:layout_marginRight="12dp"
+                                android:contentDescription="Referral Image"
+                                android:src="@drawable/refer_code_image_team" />
+
+                            <TextView
+                                android:id="@+id/tv_referral_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-32dp"
+                                android:background="@drawable/team_code_bg"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingHorizontal="12dp"
+                                android:paddingTop="2dp"
+                                android:text="Loading..."
+                                android:textColor="#2365F4"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_referral_description"
+                                android:layout_width="210dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="Invite your friends using your referral code and receive 20 points on per successful refer"
+                                android:textAlignment="center"
+                                android:textColor="#888888"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/btn_copy_code"
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:backgroundTint="@android:color/transparent"
+                                android:textStyle="bold"
+                                android:text="Copy Code"
+                                android:textAllCaps="false"
+                                android:textColor="@color/blue_btn"
+                                android:textSize="12sp"
+                                android:enabled="false"
+                                android:alpha="0.5"
+                                app:cornerRadius="12dp"
+                                app:strokeColor="@color/blue_btn"
+                                app:strokeWidth="1.5dp"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                            <Button
+                                android:id="@+id/btn_share_code"
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:backgroundTint="@color/blue_btn"
+                                android:textStyle="bold"
+                                android:text="Share"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:enabled="false"
+                                android:alpha="0.5"
+                                app:cornerRadius="12dp"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Team Section -->
+                    <ImageView
+                        android:id="@+id/iv_divider"
+                        android:layout_width="260dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="-6dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ticket_triangles_team" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_team_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="12dp"
+                            android:textStyle="bold"
+                            android:text="Your Team"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- instead of the current <com.google.android.material.search.SearchBar .../> -->
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/search_bar"
+                            android:layout_width="128dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:hint="Search"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:imeOptions="actionSearch"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Empty State -->
+                    <LinearLayout
+                        android:id="@+id/layout_empty_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/tv_empty_team"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="-16dp"
+                            android:tintMode="multiply"
+                            app:srcCompat="@drawable/no_team_bg"
+                            app:tint="#40FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tv_empty_team_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="-12dp"
+                            android:text="You have not created team yet!"
+                            android:textColor="#AAAAAA"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <!-- Team Members RecyclerView -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_team_members"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone"
+                        tools:listitem="@layout/item_view_team"
+                        tools:itemCount="3" />
+
+                    <!-- Add some bottom padding for better scrolling -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>

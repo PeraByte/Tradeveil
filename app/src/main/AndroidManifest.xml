@@ -2,7 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,88 +28,115 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tradeveil"
-        tools:targetApi="31">
+        tools:remove="android:property"
+        tools:targetApi="31"
+        android:enableOnBackInvokedCallback="true">
 
+        <activity
+            android:name=".Withdrawal"
+            android:exported="false" />
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+
+        <activity
+            android:name=".QuizResult"
+            android:exported="false"
+            android:launchMode="singleTop"
+
+            android:theme="@style/Theme.Tradeveil" />
+        <activity
+            android:name=".TransactionSuccess"
+            android:exported="false"
+            android:theme="@style/Theme.Tradeveil" />
+        <activity
+            android:name=".Missions"
+            android:exported="false" />
         <activity
             android:name=".EditProfile"
             android:exported="true" />
-
         <activity
             android:name=".GetStarted_Screen"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
+        <!-- Add this to your AndroidManifest.xml inside the <application> tag -->
         <activity
             android:name=".GlobalChat"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Login"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
         <activity
             android:name=".ManagePoints"
             android:exported="true" />
-
         <activity
             android:name=".Notifications"
             android:exported="false" />
-
-        <activity
-            android:name=".PublicProfile"
-            android:exported="true" />
-
         <activity
             android:name=".Quiz"
             android:exported="true"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-
         <activity
             android:name=".Settings"
             android:exported="true" />
-
         <activity
             android:name=".SignUp"
             android:exported="true" />
-
         <activity
             android:name=".Spin"
             android:exported="true" />
-
         <activity
             android:name=".SplashScreen"
-            android:exported="true" />
-
-        <activity
-            android:name=".StartQuiz"
             android:exported="true">
+
             <!-- Launch this activity first -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Team"
+            android:name=".StartQuiz"
             android:exported="true" />
+        <activity
+            android:name=".TransferPoints"
+            android:exported="true"/>
 
         <activity
             android:name=".VerifySignUp"
-            android:exported="true" />
+            android:exported="true" /> <!-- Correct AdMob App ID configuration -->
 
-        <activity
-            android:name=".signUpOptions"
-            android:exported="true" />
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false"
+            android:enabled="true"/>
 
+        <!-- AdMob configuration -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2219058417636032~9060805593" /> <!-- Other meta-data elements -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+
+        <service
+            android:name=".services.TransferService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
     </application>
 
 </manifest>
