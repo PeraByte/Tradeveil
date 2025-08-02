@@ -166,11 +166,12 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:hint="Search"
-                            android:maxLines="1"
-                            android:inputType="text"
                             android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:maxLines="1"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -179,8 +180,8 @@
                         android:id="@+id/layout_empty_state"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:visibility="visible">
 
                         <ImageView
@@ -213,8 +214,8 @@
                         android:layout_marginTop="16dp"
                         android:nestedScrollingEnabled="false"
                         android:visibility="gone"
-                        tools:listitem="@layout/item_view_team"
-                        tools:itemCount="3" />
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_view_team" />
 
                     <!-- Add some bottom padding for better scrolling -->
                     <View
