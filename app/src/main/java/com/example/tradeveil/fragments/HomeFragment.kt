@@ -52,9 +52,9 @@ class HomeFragment : Fragment() {
         const val MIN_TICKET_REWARD = 2
         const val MAX_TICKET_REWARD = 16
 
-        const val TWITTER_PROFILE_URL = "https://x.com/TradeVeil"
+        const val TWITTER_PROFILE_URL = "https://x.com/TradeVeil/status/1952993446119260507"
         const val YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@TradeVeil"
-        const val TELEGRAM_GROUP_URL = "https://t.me/tradeveil"
+        const val TELEGRAM_GROUP_URL = "https://t.me/tradeveil/4"
     }
 
     private var _binding: FragmentHomeBinding? = null
