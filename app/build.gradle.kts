@@ -13,7 +13,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tradeveil"
+        applicationId = "com.growtic.tradeveil"
         minSdk = 29
         targetSdk = 35
         versionCode = 1

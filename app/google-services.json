@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:771160066244:android:f2e9cb0d0d727805086191",
         "android_client_info": {
-          "package_name": "com.example.tradeveil"
+          "package_name": "com.growtic.tradeveil"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "771160066244-gt6prfho1n22k1prmakdti39tkdu9j9e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.tradeveil",
+            "package_name": "com.growtic.tradeveil",
             "certificate_hash": "2bc01a01e7abdd4bd3317695a27fc4f34f609077"
           }
         },
