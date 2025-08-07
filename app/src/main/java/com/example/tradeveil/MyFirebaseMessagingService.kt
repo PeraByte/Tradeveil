@@ -1,8 +1,8 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.example.tradeveil.services.com.example.tradeveil.NotificationHelper
+import com.growtic.tradeveil.services.com.example.tradeveil.NotificationHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*

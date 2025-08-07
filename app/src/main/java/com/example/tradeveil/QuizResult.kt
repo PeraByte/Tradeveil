@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -10,8 +10,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
-import com.example.tradeveil.services.AdManager
-import com.example.tradeveil.services.com.example.tradeveil.utils.QuizConstants
+import com.growtic.tradeveil.services.AdManager
+import com.growtic.tradeveil.services.com.example.tradeveil.utils.QuizConstants
 
 class QuizResult : AppCompatActivity() {
 

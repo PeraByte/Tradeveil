@@ -1,12 +1,12 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.tradeveil.services.AdManager
-import com.example.tradeveil.services.TransferService
-import com.example.tradeveil.services.com.example.tradeveil.NotificationHelper
-import com.example.tradeveil.NotificationWorkManager
+import com.growtic.tradeveil.services.AdManager
+import com.growtic.tradeveil.services.TransferService
+import com.growtic.tradeveil.services.com.example.tradeveil.NotificationHelper
+import com.growtic.tradeveil.NotificationWorkManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -36,7 +36,7 @@ class MyApplication : Application() {
         setupNotificationAuthListener()
 
         // Add this single line
-        com.example.tradeveil.utils.NetworkMonitor.init(this)
+        com.growtic.tradeveil.utils.NetworkMonitor.init(this)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
     }

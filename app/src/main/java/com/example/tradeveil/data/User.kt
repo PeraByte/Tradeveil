@@ -1,4 +1,4 @@
-package com.example.tradeveil.models
+package com.growtic.tradeveil.models
 
 import com.google.firebase.Timestamp
 import java.util.Date

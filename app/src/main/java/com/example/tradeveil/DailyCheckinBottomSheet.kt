@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -15,10 +15,11 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.airbnb.lottie.LottieAnimationView
-import com.example.tradeveil.services.AdManager
+import com.growtic.tradeveil.services.AdManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.growtic.tradeveil.R
 import java.text.SimpleDateFormat
 import java.util.*
 

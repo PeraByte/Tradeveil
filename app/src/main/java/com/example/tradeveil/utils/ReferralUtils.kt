@@ -1,4 +1,4 @@
-package com.example.tradeveil.utils
+package com.growtic.tradeveil.utils
 
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore

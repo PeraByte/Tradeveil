@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tradeveil"
+    namespace = "com.growtic.tradeveil"
     compileSdk = 35
 
     defaultConfig {

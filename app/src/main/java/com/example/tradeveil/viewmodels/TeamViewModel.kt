@@ -1,10 +1,10 @@
-package com.example.tradeveil.viewmodels
+package com.growtic.tradeveil.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.tradeveil.data.TeamMember
+import com.growtic.tradeveil.data.TeamMember
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore

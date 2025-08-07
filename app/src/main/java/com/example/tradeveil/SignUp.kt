@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.Intent
 import android.net.Uri
@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.tradeveil.utils.ReferralUtils
+import com.growtic.tradeveil.utils.ReferralUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.userProfileChangeRequest

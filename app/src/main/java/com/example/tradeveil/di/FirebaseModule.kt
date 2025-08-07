@@ -1,4 +1,4 @@
-package com.example.tradeveil.di
+package com.growtic.tradeveil.di
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.view.LayoutInflater
 import android.view.View

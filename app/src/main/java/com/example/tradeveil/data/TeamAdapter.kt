@@ -1,4 +1,4 @@
-package com.example.tradeveil.data
+package com.growtic.tradeveil.data
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.tradeveil.R
+import com.growtic.tradeveil.R
 
 class TeamAdapter(
     private val onItemClick: (TeamMember) -> Unit = {}

@@ -1,4 +1,4 @@
-package com.example.tradeveil.fragments
+package com.growtic.tradeveil.fragments
 
 import android.Manifest
 import android.content.Intent
@@ -22,18 +22,18 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
-import com.example.tradeveil.DailyCheckinBottomSheet
-import com.example.tradeveil.ManagePoints
-import com.example.tradeveil.Missions
-import com.example.tradeveil.NotificationWorkManager
-import com.example.tradeveil.Notifications
-import com.example.tradeveil.R
-import com.example.tradeveil.Settings
-import com.example.tradeveil.Spin
-import com.example.tradeveil.StartQuiz
-import com.example.tradeveil.Withdrawal
-import com.example.tradeveil.databinding.FragmentHomeBinding
-import com.example.tradeveil.services.AdManager
+import com.growtic.tradeveil.DailyCheckinBottomSheet
+import com.growtic.tradeveil.ManagePoints
+import com.growtic.tradeveil.Missions
+import com.growtic.tradeveil.NotificationWorkManager
+import com.growtic.tradeveil.Notifications
+import com.growtic.tradeveil.R
+import com.growtic.tradeveil.Settings
+import com.growtic.tradeveil.Spin
+import com.growtic.tradeveil.StartQuiz
+import com.growtic.tradeveil.Withdrawal
+import com.growtic.tradeveil.databinding.FragmentHomeBinding
+import com.growtic.tradeveil.services.AdManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore

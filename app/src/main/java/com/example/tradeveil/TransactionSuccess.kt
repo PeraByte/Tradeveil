@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.os.Bundle
 import android.widget.Button
@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.tradeveil.databinding.ActivityTransactionSuccessBinding
+import com.growtic.tradeveil.databinding.ActivityTransactionSuccessBinding
 
 class TransactionSuccess : AppCompatActivity() {
 

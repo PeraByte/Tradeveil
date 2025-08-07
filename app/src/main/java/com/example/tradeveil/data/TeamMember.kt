@@ -1,4 +1,4 @@
-package com.example.tradeveil.data
+package com.growtic.tradeveil.data
 
 import java.util.Date
 

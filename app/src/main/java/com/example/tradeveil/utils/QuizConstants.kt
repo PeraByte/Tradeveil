@@ -1,4 +1,4 @@
-package com.example.tradeveil.services.com.example.tradeveil.utils
+package com.growtic.tradeveil.services.com.example.tradeveil.utils
 
 object QuizConstants {
     const val TOTAL_QUIZZES = 50

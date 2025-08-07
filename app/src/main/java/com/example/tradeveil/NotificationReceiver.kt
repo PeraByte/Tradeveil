@@ -1,9 +1,9 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.example.tradeveil.services.com.example.tradeveil.NotificationHelper
+import com.growtic.tradeveil.services.com.example.tradeveil.NotificationHelper
 
 class NotificationReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

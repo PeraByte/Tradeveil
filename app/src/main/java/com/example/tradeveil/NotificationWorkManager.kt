@@ -1,5 +1,5 @@
 // Enhanced NotificationWorkManager.kt - Removed transfer-specific methods since TransferService handles them
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.Context
 import androidx.work.ExistingPeriodicWorkPolicy
@@ -7,7 +7,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
-import com.example.tradeveil.services.com.example.tradeveil.NotificationHelper
+import com.growtic.tradeveil.services.com.example.tradeveil.NotificationHelper
 import java.util.concurrent.TimeUnit
 
 class NotificationWorkManager(private val context: Context) {

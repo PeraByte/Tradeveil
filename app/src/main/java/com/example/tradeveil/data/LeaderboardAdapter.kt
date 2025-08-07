@@ -1,4 +1,4 @@
-package com.example.tradeveil.adapters
+package com.growtic.tradeveil.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
-import com.example.tradeveil.R
-import com.example.tradeveil.models.User
+import com.growtic.tradeveil.models.User
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.firebase.storage.FirebaseStorage
+import com.growtic.tradeveil.R
 
 class LeaderboardAdapter(
     private var users: List<User>,

@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.animation.ObjectAnimator
 import android.content.Intent
@@ -10,9 +10,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import cn.pedant.SweetAlert.SweetAlertDialog
-import com.example.tradeveil.services.AdManager
-import com.example.tradeveil.viewmodels.LeaderboardViewModel
-import com.example.tradeveil.services.com.example.tradeveil.utils.QuizConstants
+import com.growtic.tradeveil.services.AdManager
+import com.growtic.tradeveil.viewmodels.LeaderboardViewModel
+import com.growtic.tradeveil.services.com.example.tradeveil.utils.QuizConstants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore

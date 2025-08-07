@@ -1,4 +1,4 @@
-package com.example.tradeveil.utils
+package com.growtic.tradeveil.utils
 
 import android.app.Activity
 import android.app.Application
@@ -13,7 +13,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.Button
-import com.example.tradeveil.R
+import com.growtic.tradeveil.R
 import kotlinx.coroutines.*
 import java.lang.ref.WeakReference
 

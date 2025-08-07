@@ -1,9 +1,9 @@
-package com.example.tradeveil.services.com.example.tradeveil.utils
+package com.growtic.tradeveil.services.com.example.tradeveil.utils
 
 // JsonParser.kt
 import android.content.Context
-import com.example.tradeveil.R
-import com.example.tradeveil.services.com.example.tradeveil.data.Question
+import com.growtic.tradeveil.R
+import com.growtic.tradeveil.services.com.example.tradeveil.data.Question
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream

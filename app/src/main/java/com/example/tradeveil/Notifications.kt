@@ -1,9 +1,9 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.tradeveil.databinding.ActivityNotificationsBinding
+import com.growtic.tradeveil.databinding.ActivityNotificationsBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query

@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 sealed class TransactionItem {
     data class SentTransfer(val transfer: Transfer) : TransactionItem()

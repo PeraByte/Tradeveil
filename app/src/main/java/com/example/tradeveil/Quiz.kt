@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -14,10 +14,10 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import cn.pedant.SweetAlert.SweetAlertDialog
-import com.example.tradeveil.services.AdManager
-import com.example.tradeveil.services.com.example.tradeveil.data.Question
-import com.example.tradeveil.services.com.example.tradeveil.utils.JsonParser
-import com.example.tradeveil.services.com.example.tradeveil.utils.QuizConstants
+import com.growtic.tradeveil.services.AdManager
+import com.growtic.tradeveil.services.com.example.tradeveil.data.Question
+import com.growtic.tradeveil.services.com.example.tradeveil.utils.JsonParser
+import com.growtic.tradeveil.services.com.example.tradeveil.utils.QuizConstants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore

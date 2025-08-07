@@ -1,4 +1,4 @@
-package com.example.tradeveil.fragments
+package com.growtic.tradeveil.fragments
 
 import android.content.ActivityNotFoundException
 import android.content.ClipData
@@ -17,11 +17,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.tradeveil.R
-import com.example.tradeveil.data.TeamAdapter
-import com.example.tradeveil.data.TeamMember
-import com.example.tradeveil.databinding.FragmentTeamBinding
-import com.example.tradeveil.viewmodels.TeamViewModel
+import com.growtic.tradeveil.R
+import com.growtic.tradeveil.data.TeamAdapter
+import com.growtic.tradeveil.data.TeamMember
+import com.growtic.tradeveil.databinding.FragmentTeamBinding
+import com.growtic.tradeveil.viewmodels.TeamViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 

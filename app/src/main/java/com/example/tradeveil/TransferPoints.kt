@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.ClipboardManager
 import android.content.Context
@@ -15,9 +15,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.tradeveil.services.AdManager
-import com.example.tradeveil.services.TransferService
-import com.example.tradeveil.services.com.example.tradeveil.NotificationHelper
+import com.growtic.tradeveil.services.AdManager
+import com.growtic.tradeveil.services.TransferService
+import com.growtic.tradeveil.services.com.example.tradeveil.NotificationHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import kotlinx.coroutines.launch

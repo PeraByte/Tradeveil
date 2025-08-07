@@ -1,4 +1,4 @@
-package com.example.tradeveil.services.com.example.tradeveil.data
+package com.growtic.tradeveil.services.com.example.tradeveil.data
 
 data class Question(
     val question: String,

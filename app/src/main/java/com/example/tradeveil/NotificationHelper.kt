@@ -1,4 +1,4 @@
-package com.example.tradeveil.services.com.example.tradeveil
+package com.growtic.tradeveil.services.com.example.tradeveil
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,9 +8,9 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.example.tradeveil.MainActivity
-import com.example.tradeveil.ManagePoints
-import com.example.tradeveil.R
+import com.growtic.tradeveil.MainActivity
+import com.growtic.tradeveil.ManagePoints
+import com.growtic.tradeveil.R
 
 class NotificationHelper(private val context: Context) {
     companion object {

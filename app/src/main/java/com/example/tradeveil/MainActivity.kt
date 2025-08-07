@@ -1,4 +1,4 @@
-package com.example.tradeveil
+package com.growtic.tradeveil
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,13 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.tradeveil.databinding.ActivityMainBinding
-import com.example.tradeveil.fragments.ChatFragment
-import com.example.tradeveil.fragments.HomeFragment
-import com.example.tradeveil.fragments.LeaderboardFragment
-import com.example.tradeveil.fragments.SwapFragment
-import com.example.tradeveil.fragments.TeamFragment
-import com.example.tradeveil.services.ReferralCheckService
+import com.growtic.tradeveil.databinding.ActivityMainBinding
+import com.growtic.tradeveil.fragments.ChatFragment
+import com.growtic.tradeveil.fragments.HomeFragment
+import com.growtic.tradeveil.fragments.LeaderboardFragment
+import com.growtic.tradeveil.fragments.SwapFragment
+import com.growtic.tradeveil.fragments.TeamFragment
+import com.growtic.tradeveil.services.ReferralCheckService
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
