@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -13,7 +12,7 @@ import com.growtic.tradeveil.databinding.ActivityMainBinding
 import com.growtic.tradeveil.fragments.ChatFragment
 import com.growtic.tradeveil.fragments.HomeFragment
 import com.growtic.tradeveil.fragments.LeaderboardFragment
-import com.growtic.tradeveil.fragments.SwapFragment
+import com.growtic.tradeveil.fragments.ExPointsFragment
 import com.growtic.tradeveil.fragments.TeamFragment
 import com.growtic.tradeveil.services.ReferralCheckService
 import dagger.hilt.android.AndroidEntryPoint
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.navSwap.setOnClickListener {
-            onNavItemSelected(4, SwapFragment())
+            onNavItemSelected(4, ExPointsFragment())
         }
     }
 

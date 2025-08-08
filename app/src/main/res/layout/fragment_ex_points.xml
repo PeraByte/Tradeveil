@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.SwapFragment">
+    tools:context=".fragments.ExPointsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -94,7 +94,7 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fromCurrencySelector"
-                            android:layout_width="70dp"
+                            android:layout_width="76dp"
                             android:layout_height="24dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
@@ -112,9 +112,9 @@
 
                                 <ImageView
                                     android:id="@+id/fromCurrencyIcon"
-                                    android:layout_width="24dp"
+                                    android:layout_width="20dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginLeft="8dp"
                                     app:srcCompat="@drawable/app_icon_bg" />
 
                                 <TextView
@@ -123,6 +123,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:text="VEILS"
+                                    android:layout_marginLeft="2dp"
                                     android:textColor="@color/black"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -211,7 +212,7 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/toCurrencySelector"
-                            android:layout_width="70dp"
+                            android:layout_width="76dp"
                             android:layout_height="24dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
@@ -240,7 +241,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="4dp"
-                                    android:text="USDT"
+                                    android:text="USD-T"
                                     android:textColor="@color/black"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -274,7 +275,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
-                    android:text="Fees 10% Per Swap"
+                    android:text="Fees 10% Per Exchange"
                     android:textSize="10sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/feeWarningIcon"
@@ -287,7 +288,7 @@
                     android:layout_height="42dp"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="@color/blue_btn"
-                    android:text="Create Swap"
+                    android:text="Create"
                     android:textStyle="bold"
                     app:icon="@drawable/arrow_icon_swap"
                     app:iconGravity="textEnd"
@@ -311,7 +312,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="You Must Have 5.000 Points For Successful Swap"
+                    android:text="You Must Have 5.000 Points For Successful Exchange"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="8sp"
                     android:textStyle="bold"
@@ -334,7 +335,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="You Must Have 1 Active Friend For Swap"
+                    android:text="You Must Have 1 Active Friend For Exchange"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="8sp"
                     android:textStyle="bold"
@@ -357,7 +358,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="Ensure That You Are Active In App For Successful Swap"
+                    android:text="Ensure That You Are Active In App For Successful Exchange"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="8sp"
                     android:textStyle="bold"
@@ -380,7 +381,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
-                    android:text="Received Points Will Not Be Counted In Swap"
+                    android:text="Received Points Will Not Be Counted In Exchange"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="8sp"
                     android:textStyle="bold"
@@ -388,19 +389,42 @@
                     app:layout_constraintStart_toEndOf="@+id/requirementIcon4"
                     app:layout_constraintTop_toTopOf="@+id/requirementIcon4" />
 
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/send_message_icon_swap"
+                    app:layout_constraintStart_toStartOf="@+id/requirementIcon4"
+                    app:layout_constraintTop_toBottomOf="@+id/requirementIcon4"
+                    app:tint="#63000000" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Exchanges are limited to in-app asset adjustments for gameplay progression"
+                    android:textColor="@color/dark_gray_text"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
                 <TextView
                     android:id="@+id/eligibilityText"
                     android:layout_width="200dp"
                     android:layout_height="32dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
-                    android:text="If you meet these requirements then, Congrats! you are eligilble for swap"
+                    android:text="If you meet these requirements then, Congrats! you are eligilble for Exchange"
                     android:textAlignment="gravity"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="8sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/requirementIcon4"
-                    app:layout_constraintTop_toBottomOf="@+id/requirementText4" />
+                    app:layout_constraintStart_toStartOf="@+id/imageView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

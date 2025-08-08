@@ -31,7 +31,6 @@ import com.growtic.tradeveil.R
 import com.growtic.tradeveil.Settings
 import com.growtic.tradeveil.Spin
 import com.growtic.tradeveil.StartQuiz
-import com.growtic.tradeveil.Withdrawal
 import com.growtic.tradeveil.databinding.FragmentHomeBinding
 import com.growtic.tradeveil.services.AdManager
 import com.google.firebase.auth.FirebaseAuth
@@ -42,7 +41,6 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import java.text.NumberFormat
 import kotlin.math.max
-import kotlin.math.pow
 
 class HomeFragment : Fragment() {
 
@@ -398,9 +396,6 @@ class HomeFragment : Fragment() {
         binding.settingsButton.setOnClickListener {
             animateButtonClick(it) { navigateWithSlideAnimation(Settings::class.java) }
         }
-        binding.earnedPointsCard.setOnClickListener {
-            animateCardClick(it) { navigateWithSlideAnimation(Withdrawal::class.java) }
-        }
         binding.quizButton.setOnClickListener {
             animateButtonClick(it) { navigateWithSlideAnimation(StartQuiz::class.java) }
         }
@@ -415,6 +410,12 @@ class HomeFragment : Fragment() {
         }
         binding.giftIcon.setOnClickListener {
             animateButtonClick(it) { navigateWithSlideAnimation(Spin::class.java) }
+        }
+
+        binding.earnedPointsCard.setOnClickListener {
+            animateButtonClick(it) {
+                Toast.makeText(context, "Coming soon...", Toast.LENGTH_LONG).show()
+            }
         }
 
         binding.shopButton.setOnClickListener {
@@ -519,12 +520,6 @@ class HomeFragment : Fragment() {
         when (activityClass) {
             Settings::class.java, Notifications::class.java -> {
                 // Slide from right for settings/notifications
-                requireActivity().overridePendingTransition(
-                    R.anim.slide_in_right, R.anim.slide_out_left
-                )
-            }
-            Withdrawal::class.java, ManagePoints::class.java -> {
-                // Slide up for wallet-related activities
                 requireActivity().overridePendingTransition(
                     R.anim.slide_in_right, R.anim.slide_out_left
                 )

@@ -15,9 +15,6 @@
             android:id="@+id/action_homeFragment_to_startQuiz"
             app:destination="@id/startQuiz" />
         <action
-            android:id="@+id/action_homeFragment_to_withdrawal"
-            app:destination="@id/withdrawal" />
-        <action
             android:id="@+id/action_homeFragment_to_missions"
             app:destination="@id/missions" />
         <action
@@ -43,10 +40,6 @@
         android:name="com.growtic.tradeveil.Notifications"
         android:label="activity_notifications"
         tools:layout="@layout/activity_notifications" />
-    <activity
-        android:id="@+id/withdrawal"
-        android:name="com.growtic.tradeveil.Withdrawal"
-        android:label="Withdrawal" />
     <activity
         android:id="@+id/startQuiz"
         android:name="com.growtic.tradeveil.StartQuiz"

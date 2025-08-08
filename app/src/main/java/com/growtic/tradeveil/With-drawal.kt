@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -16,7 +15,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-class Withdrawal : AppCompatActivity() {
+class `With-drawal` : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
@@ -32,7 +31,7 @@ class Withdrawal : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_withdrawal)
+        setContentView(R.layout.activity_with_drawal)
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -91,7 +90,7 @@ class Withdrawal : AppCompatActivity() {
                 val currentUser = auth.currentUser
                 if (currentUser == null) {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@Withdrawal, "User not authenticated", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@`With-drawal`, "User not authenticated", Toast.LENGTH_SHORT).show()
                     }
                     return@launch
                 }
@@ -117,7 +116,7 @@ class Withdrawal : AppCompatActivity() {
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@Withdrawal, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@`With-drawal`, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

@@ -9,15 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.growtic.tradeveil.databinding.FragmentSwapBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.growtic.tradeveil.databinding.FragmentExPointsBinding
 import java.text.DecimalFormat
 
-class SwapFragment : Fragment() {
+class ExPointsFragment : Fragment() {
 
-    private var _binding: FragmentSwapBinding? = null
+    private var _binding: FragmentExPointsBinding? = null
     private val binding get() = _binding!!
     private val auth = FirebaseAuth.getInstance()
     private val db = FirebaseFirestore.getInstance()
@@ -34,7 +33,7 @@ class SwapFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSwapBinding.inflate(inflater, container, false)
+        _binding = FragmentExPointsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
