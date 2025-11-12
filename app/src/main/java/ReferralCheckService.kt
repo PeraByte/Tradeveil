@@ -1,4 +1,4 @@
-package com.growtic.tradeveil.services
+package com.koasac.tradeveil.services
 
 import android.app.Service
 import android.content.Intent

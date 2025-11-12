@@ -425,7 +425,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="48dp"
-            android:text="v1.0.1"
+            android:text="v1.0.0"
             android:textColor="@color/dark_gray_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
