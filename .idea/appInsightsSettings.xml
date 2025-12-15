@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.growtic.tradeveil" />
-                  <option name="mobileSdkAppId" value="1:771160066244:android:f2e9cb0d0d727805086191" />
-                  <option name="projectId" value="tradeveil" />
-                  <option name="projectNumber" value="771160066244" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
