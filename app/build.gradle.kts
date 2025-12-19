@@ -7,15 +7,15 @@ plugins {
 }
 
 android {
-    namespace = "com.koasac.tradeveil"
+    namespace = "com.growwtic.tradeveil"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.koasac.tradeveil"
+        applicationId = "com.growwtic.tradeveil"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "3.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
