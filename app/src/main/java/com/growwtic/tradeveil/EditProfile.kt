@@ -1,7 +1,6 @@
 package com.growwtic.tradeveil
 
 import android.app.Activity
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
@@ -11,9 +10,9 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.google.android.material.textfield.TextInputEditText
@@ -46,11 +45,11 @@ class EditProfile : AppCompatActivity() {
 
     private var imageUri: Uri? = null
     private var compressedImageData: ByteArray? = null
-    private val PERMISSION_REQUEST_CODE = 123
     private val MAX_IMAGE_SIZE = 1024 // Max width/height in pixels
     private val JPEG_QUALITY = 85 // JPEG compression quality (0-100)
 
-    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+    // Replace the old getContent with Photo Picker
+    private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri != null) {
             try {
                 imageUri = uri
@@ -138,40 +137,16 @@ class EditProfile : AppCompatActivity() {
                 resizedBitmap.recycle()
             }
         } catch (e: FileNotFoundException) {
-
+            Toast.makeText(this, "Image file not found", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun selectProfileImage() {
         try {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-                if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES), PERMISSION_REQUEST_CODE)
-                } else {
-                    getContent.launch("image/*")
-                }
-            } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), PERMISSION_REQUEST_CODE)
-                } else {
-                    getContent.launch("image/*")
-                }
-            } else {
-                getContent.launch("image/*")
-            }
+            // Launch Photo Picker - no permissions needed!
+            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         } catch (e: Exception) {
             Toast.makeText(this, "Error selecting image", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == PERMISSION_REQUEST_CODE) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                getContent.launch("image/*")
-            } else {
-                Toast.makeText(this, "Permission denied. Cannot select image.", Toast.LENGTH_SHORT).show()
-            }
         }
     }
 
@@ -249,7 +224,6 @@ class EditProfile : AppCompatActivity() {
                     val progress = (100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount)
                 }
                 .addOnSuccessListener {
-
                     // Get download URL and save it to Firestore
                     imageRef.downloadUrl.addOnSuccessListener { downloadUri ->
                         db.collection("users").document(currentUser.uid)
@@ -329,6 +303,6 @@ class EditProfile : AppCompatActivity() {
     private fun resetSaveButton() {
         saveButton.isEnabled = true
         saveButton.text = "Save"
-        saveButton.setTextColor(ContextCompat.getColor(this, R.color.white)) // Use your primary color
+        saveButton.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 }

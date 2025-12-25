@@ -5,21 +5,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
+    <!-- REMOVED: READ_EXTERNAL_STORAGE - Use Photo Picker instead -->
+    <!-- REMOVED: WRITE_EXTERNAL_STORAGE - Use Photo Picker instead -->
+    <!-- REMOVED: READ_MEDIA_IMAGES - Use Photo Picker instead -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"
         tools:ignore="SelectedPhotoAccess" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:name=".MyApplication"
@@ -45,7 +41,6 @@
             android:name=".QuizResult"
             android:exported="false"
             android:launchMode="singleTop"
-
             android:theme="@style/Theme.Tradeveil" />
         <activity
             android:name=".TransactionSuccess"
@@ -60,7 +55,6 @@
         <activity
             android:name=".GetStarted_Screen"
             android:exported="true" />
-        <!-- Add this to your AndroidManifest.xml inside the <application> tag -->
         <activity
             android:name=".GlobalChat"
             android:exported="false"
@@ -97,11 +91,8 @@
         <activity
             android:name=".SplashScreen"
             android:exported="true">
-
-            <!-- Launch this activity first -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -111,25 +102,23 @@
         <activity
             android:name=".TransferPoints"
             android:exported="true"/>
-
         <activity
             android:name=".VerifySignUp"
-            android:exported="true" /> <!-- Correct AdMob App ID configuration -->
+            android:exported="true" />
 
         <receiver
             android:name=".NotificationReceiver"
             android:exported="false"
             android:enabled="true"/>
 
-        <!-- AdMob configuration -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2219058417636032~9060805593" /> <!-- Other meta-data elements -->
+            android:value="ca-app-pub-2219058417636032~9060805593" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <meta-data
-            android:name="com.google.fi]rebase.messaging.default_notification_channel_id"
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
