@@ -7,15 +7,15 @@ plugins {
 }
 
 android {
-    namespace = "com.growwtic.tradeveil"
+    namespace = "com.growtiic.tradeveil"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.growwtic.tradeveil"
+        applicationId = "com.growtiic.tradeveil"
         minSdk = 29
         targetSdk = 35
-        versionCode = 2
-        versionName = "3.1.0"
+        versionCode = 3
+        versionName = "3.1.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

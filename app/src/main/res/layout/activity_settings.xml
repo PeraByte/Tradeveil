@@ -479,7 +479,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="v3.1.0"
+            android:text="v3.1.2"
             android:textColor="@color/dark_gray_text"
             app:layout_constraintBottom_toTopOf="@+id/textView12"
             app:layout_constraintEnd_toEndOf="parent"

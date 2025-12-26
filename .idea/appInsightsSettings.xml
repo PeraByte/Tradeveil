@@ -9,7 +9,7 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.growwtic.tradeveil" />
+                  <option name="appId" value="com.growtiic.tradeveil" />
                   <option name="mobileSdkAppId" value="1:771160066244:android:f2e9cb0d0d727805086191" />
                   <option name="projectId" value="tradeveil" />
                   <option name="projectNumber" value="771160066244" />
